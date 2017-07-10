@@ -65,6 +65,21 @@ const Presenter = {
 const AppController = {
   onClickNewCounter: function(event){
     // Your Code Here
+    // document.getElementById('counter-list').appendChild(document.createElement("div")).setAttribute('class','counter');
+    var counterList = document.getElementById('counter-list');
+    counterList.appendChild(document.createElement('div')).setAttribute('class','counter','data-index','');
+    var counter = document.getElementsByClassName('counter');
+    
+    var h3 = document.createElement('h3');
+    var btn = document.createElement('button');
+
+    h3.innerHTML='Count: <span>0</span>';
+
+    btn.className='increment';
+    btn.appendaChild(document.createTextNode('+ 1'));
+
+    
+
   },
   onClickIncrement: function(event){
     // Your Code Here
