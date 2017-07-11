@@ -34,6 +34,7 @@ const Stopwatch = {
   }
 };
 
+
 /// User Interface ///
 const ViewEngine = {
   updateTimeDisplay: function(mins, secs, millisecs){
@@ -56,6 +57,7 @@ const AppController = {
   },
   handleClickStart: function() {
     // Your Code Here
+    if (!Stopwatch.isRunning) { Stopwatch.start(); }
   },
   handleClickStopReset: function(){
     // Your Code Here
@@ -67,4 +69,12 @@ const AppController = {
 
 window.onload = function(){
   // Attach AppController methods to the DOM as event handlers here.
+//   $startTimer.on('click', function(event) {
+    // event.
+//   })
+// var $startTimer = $('#start');
+// var $newLapTime = $('lap');
+// var $stopTimer = $('#stop');
+$('start').onclick = AppController.handleClickStart;
+
 };
