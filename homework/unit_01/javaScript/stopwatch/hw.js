@@ -24,7 +24,7 @@ const Stopwatch = {
     // Your Code Here
   },
   start: function(){
-    // Your Code Here
+    // Your Code Hereß
   },
   stop: function(){
     // Your Code Here
@@ -33,7 +33,6 @@ const Stopwatch = {
     // Your Code Here
   }
 };
-
 
 /// User Interface ///
 const ViewEngine = {
@@ -57,7 +56,7 @@ const AppController = {
   },
   handleClickStart: function() {
     // Your Code Here
-    if (!Stopwatch.isRunning) { Stopwatch.start(); }
+    // if (!Stopwatch.isRunning) { Stopwatch.start(); }
   },
   handleClickStopReset: function(){
     // Your Code Here
@@ -75,6 +74,10 @@ window.onload = function(){
 // var $startTimer = $('#start');
 // var $newLapTime = $('lap');
 // var $stopTimer = $('#stop');
-$('start').onclick = AppController.handleClickStart;
+// $('#start').onclick = AppController.handleClickStart;
+$('#start').on('click', function(event){
+  event.stopPropagation();
+  AppController.handleClickStart();
+})
 
 };

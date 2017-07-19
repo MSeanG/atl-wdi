@@ -6,6 +6,13 @@
 
 var makeChange = function(price, payment) {
   // Your Code Here
+  var change = Math.floor((payment - price)*100);
+  if (change <= 0){
+    console.log('No Change');
+    return [0,0,0,0];
+  }
+  var quarters = Math.floor(change/25);
+  change = change % 25;
 };
 
 /// DO NOT EDIT BELOW THIS LINE ///
