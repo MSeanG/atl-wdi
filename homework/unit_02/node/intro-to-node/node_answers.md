@@ -6,36 +6,54 @@
 ### The 6 highest-starred npm packages are:
 
 # Library 1 Name
-
+lodash
 ### Description:
-brief brief description here
+Lodash is a toolkit of Javascript functions that provides clean, performant methods for manipulating objects and collections. It is a "fork" of the Underscore library and provides additional functionality as well as some serious performance improvements.
 
 ### Total Downloads last month:
+43,530,764
+
 
 # Library 2 Name
-
+request
 ### Description:
-brief description here
+Request is designed to be the simplest way possible to make http calls. It supports HTTPS and follows redirects by default.
 
 ### Total Downloads last month:
+24,783,103
+
 
 # Library 3 Name
-
+async
 ### Description:
-brief description here
+Async is a utility module which provides straight-forward, powerful functions for working with asynchronous JavaScript. 
 
 ### Total Downloads last month:
+46,559,560
+
 
 # Library 4 Name
-
+chalk
 ### Description:
-brief description here
+Terminal string styling module.
 
 ### Total Downloads last month:
+26,643,536
+
 
 # Library 5 Name
-
+express
 ### Description:
-brief description here
+Fast, unopinionated, minimalist web framework for node.
 
 ### Total Downloads last month:
+13,493,555
+
+
+# Library 6 Name
+bluebird
+### Description:
+Bluebird is a fully featured promise library with focus on innovative features and performance
+
+### Total Downloads last month:
+16,320,897
