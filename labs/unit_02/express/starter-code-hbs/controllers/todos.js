@@ -21,7 +21,7 @@ router.get('/:id', (req,res)=>{
 });
 router.post('/',(req,res)=>{
     const newTodo = {
-    desription: req.body.urgent,
+    description: req.body.description,
     urgent: req.body.urgent
     };
     data.seededTodos.push(newTodo);

@@ -21,7 +21,7 @@ app.listen(port, function(){
 
 app.get('/', (req, res, next) => {
     //res.send('Welcome to Pizza Express!');
-
+    res.render('index.hbs',{})
 });
 app.get('/topping/:type', (req, res, next) => {
     var type = 'pepperoni';
