@@ -37,14 +37,38 @@ router.get('/:id', function(req, res){
 //==============================
 // CREATE
 //==============================
-
+router.get('/:id/edit', (req, res) => {
+  const id = req.params.id;
+  const todo = data.seededTodos[id];
+  res.render("pirates/edit", {
+    todo: todo,
+    id: id
+  })
+});
 //==============================
 // UPDATE
 //==============================
-
+router.put('/:id', (req, res) => {
+  // We have the ID
+  const id = req.params.id;
+  // Use the id to grab specific index in array
+  const todo = data.modules[id];
+  // Update the description and urgent values
+  todo.description = req.body.description;
+  todo.urgent = req.body.urgent;
+  // redirect back to individual pirates
+  res.method = "GET";
+  res.redirect(`/pirates/${id}`);
+});
 //==============================
 // DESTROY
 //==============================
+router.delete('/:id', (req, res) => {
+  data.models.splice(req.params.id, 1);
+
+  res.method= "GET";
+  res.redirect("/pirates");
+});
 
 //==============================
 // EXPORTS
