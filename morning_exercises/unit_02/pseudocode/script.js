@@ -20,12 +20,17 @@ return largeBarrel;
 // Problem 1:
 // Barrels O' RUM
 
+<<<<<<< HEAD
 //var barrels = function(small, large, total){
 //  var smallBarrel = 60;
 //  var largeBarrel = (total - (small * smallBarrel)) / large;
 //
 //return largeBarrel;
 //};
+=======
+var barrels = function(small, large, total){
+};
+>>>>>>> ba48ae94ea8a01ec9032374fe498d7cd581ad2da
 
 //*************************
 // Problem 2:
