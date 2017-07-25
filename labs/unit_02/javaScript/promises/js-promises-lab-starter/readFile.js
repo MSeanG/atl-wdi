@@ -1,27 +1,34 @@
+//Using strict mode
 'use strict';
 
+//fs allows node to parse a file and get it's text values
 const fs = require('fs');
-//console.log(process.argv)
+
+//process.argv is an array of what we have written in the command line
+//process.argv[2] is the file we want to be read.
 let inFile = process.argv[2];
-const readFilePromise = new Promise((resolve,reject)=>{
-  fs.readFile(inFile,{encoding: 'utf8'}, (err, content)=>{
-    if(err){
+
+const readFilePromise = new Promise((resolve, reject) => {
+  fs.readFile(inFile, {encoding: 'utf8'}, (err, content) => {
+    if (err) {
       reject(err);
     }
     resolve(content);
   });
 });
-readFilePromise.then(data => {
-  let lines = data.split('\n');
-  lines.pop()
-  lines.forEach(function(line){
-    console.log('hello,' +line+'!');
-  });
+
+readFilePromise
+  .then(data => data.split('\n'))
+  .then(lines => {
+    lines.pop()
+    lines.forEach(function(line) {
+      console.log('Hello, ' + line + '!');
+    });
+  })
   .catch(err => {
-  console.log('there was an error');
-  console.log(err)
+    console.log("There was an error!");
+    console.log(err);
   });
-});
 
 //fs.readFile(inFile, { encoding: 'utf8' }, function(error, content) {
 //  if (error) {
