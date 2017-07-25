@@ -14,7 +14,17 @@ class Tamagotchi {
         return this.foodInTummy--;
         console.log('food in tummy:' +this.foodInTummy);
         console.log('WAHH!!!' +this.name);
-    };
+    }
+    puke(){
+        return this.foodInTummy--;
+        console.log('restedness of:' +this.foodInTummy);
+        console.log('YAWN!!!' +this.name);
+    }
+    yawn(){
+        return this.restedness--;
+        console.log('food in tummy:' +this.restedness);
+        console.log('WAHH!!!' +this.name);
+    }
 }
 class Zero extends Tamagotchi{
     constructor(name,creatureType){
@@ -26,19 +36,29 @@ class One extends Tamagotchi{
         super(name,creatureType);
     }
 }
+class Two extends Tamagotchi{
+    constructor(name,creatureType){
+        super(name,creatureType);
+    }
+}
+class Three extends Tamagotchi{
+    constructor(name,creatureType){
+        super(name,creatureType);
+    }
+}
 //create new Tamagotchis
-var Tamagotchi1 = new Tamagotchi();
-var Tamagotchi2 = new Tamagotchi();
 const tim = new Zero('Tim','Tiny');
 const sam = new One('Sam','Small');
+const mat = new Two('Mat','Medium');
+const bob = new Three('Bob','Big');
 
 //test out your Tamagotchies below via console.logs
-console.log(Tamagotchi1);
-console.log(Tamagotchi2);
+
 console.log(tim);
 console.log(sam);
-
-Tamagotchi1.cry();
-Tamagotchi2.cry();
+console.log(mat);
+console.log(bob);
 tim.cry();
 sam.cry();
+mat.puke();
+bob.yawn();
