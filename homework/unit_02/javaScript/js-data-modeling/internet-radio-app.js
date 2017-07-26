@@ -29,16 +29,16 @@ var playLists = {
 var exampleStation = {
     id: '123GH4GV56B7MNU8I9L0987N6',
     name: 'WSB 95.5',
-    genre: {
+    genre: [{
         id:'123GH4GV56B7MNU8I9L0987N7',
         music_genre: ['Talk Radio']
-    },
+    }],
     popularity: {
         id: '123GH4GV56B7MNU8I9L0987N8',
         numberOfListeners: 1234567
     },
-    playLists: {
+    playLists: [{
         id: '123GH4GV56B7MNU8I9L0987N9',
         playList: ['Re-runs']
-    }
+    }]
 }
