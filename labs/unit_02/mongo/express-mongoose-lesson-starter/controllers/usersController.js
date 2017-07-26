@@ -5,7 +5,18 @@ var User = require("../models/user");
 var Item = require("../models/item");
 
 // USERS INDEX ROUTE
+router.get('/', (request, response) => {
 
+    User.find({})
+        .then((users) => {
+            response.render('users/index', {
+                users: users
+            });
+        })
+        .catch((error) => {
+            console.log(`ERROR!!!! ${error}`);
+        });
+})
 // USER SHOW ROUTE
 
 // USER CREATE ROUTE
