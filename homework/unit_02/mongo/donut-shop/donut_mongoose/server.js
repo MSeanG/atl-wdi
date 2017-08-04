@@ -34,12 +34,15 @@ app.use('/seed', seedController);
 
 //for root directory, show all donuts
 var donutsController = require('./controllers/donuts.js');
-app.use('/', donutsController);
+//app.use('/', donutsController);
 
 //======================
 // LISTENERS
 //======================
 //CONNECT MONGOOSE TO "donut_store"
-
+mongoose.connect('mongodb://localhost/donut_mongoose');
 
 //CREATE THE MONGOOSE CONNECTION and SET APP TO LISTEN to 3000
+app.listen(4000, function(){
+  console.log("app listening on port 4000");
+});
