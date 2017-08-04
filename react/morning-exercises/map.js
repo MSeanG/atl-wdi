@@ -25,4 +25,7 @@ const people = [
 }
 ];
 
-const names = 
+const names = people.map(function(x){
+  return x.name;
+});
+console.log(names);
