@@ -4,6 +4,8 @@ import Search from './components/Search';
 import Movie from './components/Movie';
 import example from './omdbExample.json'
 
+import axios from "axios";
+
 class App extends Component {
   constructor(){
     super();
@@ -12,9 +14,18 @@ class App extends Component {
     }
   }
 
+  //componentWillMount(){
+  //  this._searchByTitile();
+  //}
   //Update these methods to make axios calls to OMDB and update this.state.movie with the response from the server
   _searchByTitle = () => {
     console.log("Search by Title");
+    // Get value from search input field.
+    const title = document.getElementById("#title").value;
+    const url = `https://www.omdbapi.com/?t=${title}&apikey=d31f1a94`;
+    axios.get(url).then(response => {
+      console.log(response);
+    });
   }
 
   _searchById = () => {

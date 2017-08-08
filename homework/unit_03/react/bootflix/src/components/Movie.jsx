@@ -8,6 +8,7 @@ const Movie = () => {
       <div className="movie">
         <h3>Movie Title</h3>
         <p>
+          
           <strong>Released:</strong> 1984<br />
           <strong>Directed By:</strong> Some director<br />
           <em>Genre:</em>
