@@ -20,3 +20,8 @@ d = "Fixnum"
 e = "Float"
 d==e
 puts d
+
+#4
+christine = "Hi, I'm Christine"
+likesTo = "long walks on the beach, kinda."
+puts christine + " and I like " + likesTo
