@@ -25,3 +25,13 @@ puts d
 christine = "Hi, I'm Christine"
 likesTo = "long walks on the beach, kinda."
 puts christine + " and I like " + likesTo
+
+#5
+def times_two(i)
+  i*2
+end
+times_two(3)
+
+print "Enter your name: "
+name = gets
+puts "Hello #{name}"
