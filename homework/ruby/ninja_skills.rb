@@ -1,3 +1,4 @@
+#1
 def testab
   a = true
   b = false
@@ -7,3 +8,9 @@ def testab
     puts "true"
   end
 end
+
+#2
+x = "nil"
+puts x + " was hear"
+print x
+puts x.class
