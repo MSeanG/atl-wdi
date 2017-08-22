@@ -14,3 +14,9 @@ x = "nil"
 puts x + " was hear"
 print x
 puts x.class
+
+#3
+d = "Fixnum"
+e = "Float"
+d==e
+puts d
