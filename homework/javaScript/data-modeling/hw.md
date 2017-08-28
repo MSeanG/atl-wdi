@@ -61,12 +61,27 @@ how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
 > Answer here
+```js
+ var task = {
+   name: '',
+   timeStarted: '',
+   timeFinished: '',
+ }
+
+ var project = {
+
+ }
+```
+
 
 ### 2. Photo Sharing App
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
 > Answer here
+```js
+
+```
 
 ### 3. Home Automation Manager
 
@@ -76,6 +91,9 @@ information to turn on and off different lights and adjust the thermostat up
 and down.
 
 > Answer here
+```js
+
+```
 
 ### 4. Sneaker Store
 
@@ -84,6 +102,9 @@ case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
 
 > Answer here
+```js
+
+```
 
 ## Representing Abstractions in Code
 
@@ -140,6 +161,9 @@ var exampleLine = {
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
 > Answer here
+```js
+
+```
 
 ### 6. Doctor Appointment App
 
@@ -243,6 +267,9 @@ other? Are there any circumstances in which the other representation might be
 the better choice?
 
 > Answer here
+```js
+
+```
 
 ## Tying It Together
 
@@ -254,12 +281,21 @@ a.  What are some possible entities that your application might use to model its
     data? Please pick at least two, with at least two properties apiece.
 
   > Answer here
+  ```js
+
+  ```
 
 b.  How might those entities be represented in JavaScript code?
 
   > Answer here
+  ```js
+
+  ```
 
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
 
   > Answer here
+  ```js
+
+  ```

@@ -1,59 +1,48 @@
 # asking for subtotal
-p "whats your subtotal"
+p "What's your subtotal?"
 subtotal = gets.chomp.to_f
 
 p subtotal
 
-p "number of people"
+p "Number of people to pay"
 people = gets.chomp.to_f
 
 p people
 
 puts %q{
-  how much tip to leave?
-  1. 15%
-  2. 18%
+  Tip percent?
+  1. 10%
+  2. 15%
   3. 20%
-  4. other
+  4. Other
 }
 
-option = STDIN.gets.chomp
-p option
+percent = STDIN.gets.chomp
 
-case option
+p percent
+
+case percent
   when "1"
-    tip_percent = 0.15
+    tip_percent = 0.10
   when "2"
-    tip_percent = 0.18
+    tip_percent = 0.15
   when "3"
     tip_percent = 0.20
-  else
-    puts "Invalid option, assuming 50% tip"
-    tip_percent = 0.50
+  when "4"
+    tip_percent = gets.chomp.to_f
 end
 
 p tip_percent
 
-p "What is the tax percentage? (eg 5, 6, 7)"
-tax_percent = gets.chomp.to_f
+p "What's the tax percentage?"
+tax_precent = gets.chop.to_f
 
-p tax_percent
+p tax_precent
 
+tax_value = subtotal * tax_percent
 
-
-tax_value = subtotal * (tax_percent/100.0)
 # meal_with_tax = subtotal + tax_value
-p 'tax value is #{tax_value}'
-p tax_value
-tip_value = subtotal * tip_percent
-p tip_value
+meal_with_tax = subtotal + tax_value
+
 # total_value = meal_with_tax * tip_percent/100
 # total = meal_with_tax + tip_value
-total = subtotal + tax_value + tip_value
-total_pp = total/people
-
-puts "total is #{total}"
-puts "each person pays #{total_pp}"
-
-
-

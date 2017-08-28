@@ -19,7 +19,11 @@ people = [
     )
 ]
 
-upper_case_full_names = []
+upper_case_full_names = people.map do |person|
+    full_name = "#{person.firsrt_name} {person.last_name}"
+    full_name.upcase
+end
+puts upper_case_full_names
 
 
 #   2. Find the first order for each user
@@ -63,7 +67,10 @@ users = [
     )
 ]
 
-first_order_for_each_user = []
+first_order_for_each_user = users.map do |user|
+    user[:orders].first
+end
+first_order_for_each_user
 
 
 #   3. Find the average amount spent on coffee, per transaction, for each person
@@ -122,8 +129,12 @@ people = [
     )
 ]
 
-coffee_average_per_person = []
-
+coffee_average_per_person = people.map do |average|
+    average
+first_order_for_each_user = users.map do |user|
+    user[:orders].first
+end
+first_order_for_each_user
 
 #   4. Find the most expensive product for each store, with the store name:
 

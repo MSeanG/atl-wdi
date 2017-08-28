@@ -18,7 +18,10 @@ users = [
     }
 ]
 
-first_user = ???
+first_user = users.min_by do |user|
+    user[:created_at]
+end
+puts first_user
 
 # 2. Find the first customer's account balance
 
@@ -60,9 +63,19 @@ customers = [
         ]
     )
 ]
+first_customer = customers.first
 
-first_customer_account_balance = ???
+first_customer_credits = first_customer.credits.map do |credit|
+    credit.amount
+end.reduce(:+)
 
+first_customer_debits = first_customer.debits.map do |debit|
+    debit.amount
+end.reduce(:+)
+
+first_customer_account_balance = first_customer_credits - first_customer_debits
+end
+puts first_customer_account_balance
 # 3. Remove hair care products from the database
 
 products = [
@@ -112,7 +125,7 @@ customers = [
     )
 ]
 
-sorted_customers = ???
+sorted_customers = cu
 
 # 6. Return all decorations with  in their description
 
