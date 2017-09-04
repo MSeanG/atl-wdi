@@ -315,9 +315,9 @@ You've been tasked with building an in-browser tic-tac-toe game.
 a.  What are some possible entities that your application might use to model its
     data? Please pick at least two, with at least two properties apiece.
 
-  > Answer here
+  > Answer here One possibility would be player models. The other would be a game board.
   ```js
-
+    
   ```
 
 b.  How might those entities be represented in JavaScript code?
@@ -350,7 +350,6 @@ b.  How might those entities be represented in JavaScript code?
       position9: '',
     }
   }
-
   var move {
     player1: 'X',
     position: 1,
@@ -360,7 +359,5 @@ b.  How might those entities be represented in JavaScript code?
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
 
-  > Answer here
-  ```js
+  > The above JS code speaks for itself I  believe.
 
-  ```
