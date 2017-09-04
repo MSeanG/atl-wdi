@@ -301,10 +301,8 @@ Under what circumstances might one representation be a better choice than the
 other? Are there any circumstances in which the other representation might be
 the better choice?
 
-> Answer here
-```js
+> Option 1 makes finding all of the appointments for one doctor easy, a disadvantage of option 1 is would be finding all of a patients appointments. Option 2 makes it dufficult to find all of a doctors appointments.
 
-```
 
 ## Tying It Together
 
@@ -315,10 +313,8 @@ You've been tasked with building an in-browser tic-tac-toe game.
 a.  What are some possible entities that your application might use to model its
     data? Please pick at least two, with at least two properties apiece.
 
-  > Answer here One possibility would be player models. The other would be a game board.
-  ```js
-    
-  ```
+  > One possibility would be player models. The other would be a game board.
+
 
 b.  How might those entities be represented in JavaScript code?
 
