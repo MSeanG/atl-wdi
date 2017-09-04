@@ -39,7 +39,13 @@ router.get('/donuts', function(req, res) {
 					img: "http://sweets.seriouseats.com/images/20110313-142295-Dough-DonutHoles.jpg",
 					price: 10,
 					qty: 23
-		}
+		}, {
+					name: "Glazed Donut",
+					description: "I am a glazed donut.",
+					img: "http://cdn.phillymag.com/wp-content/uploads/2013/09/donut.png",
+					price: 5,
+					qty: 99
+			}
 	];
 
 
