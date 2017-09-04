@@ -60,17 +60,18 @@ track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
-> Answer here
 ```js
  var task = {
-   name: '',
-   timeStarted: '',
-   timeFinished: '',
- }
+   name: 'finish homework',
+   timeStarted: '06/26/2017',
+   timeFinished: '09/05/2017',
+ };
 
  var project = {
-
- }
+   name: 'project 3',
+   description: 'Single Page Applicationbuilt with the MERN stack',
+   tasks: ['Have at least 3 models, Use React as a front-end framework, Have complete RESTful routes']
+ };
 ```
 
 
@@ -78,9 +79,21 @@ keep them organized.
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
-> Answer here
 ```js
-
+var user {
+  username:'John Doe',
+  images:['image/one.png','image/two.png','image/three.png'],
+  albums:['Path of Totality','WDI-11'],
+};
+var album {
+  albumName:'Path of Totality',
+  images:['image/one.png','image/two.png'],
+};
+var image{
+  imageTitle:'Eclipse 2017',
+  date:'08/21/2017',
+  url:['image/one.png'],
+};
 ```
 
 ### 3. Home Automation Manager
@@ -90,9 +103,18 @@ track of the time and temperature of the house that it monitors, and use that
 information to turn on and off different lights and adjust the thermostat up
 and down.
 
-> Answer here
 ```js
-
+var house {
+  lights: ['front door','livingroom','kitchen','bedroom',]
+  tempLow: '70',
+  tempHigh: '74',
+}
+var light {
+  on: '7pm',
+  off: '6am',
+  location: 'livingroom',
+  name: 'ceiling light'
+}
 ```
 
 ### 4. Sneaker Store
@@ -101,9 +123,22 @@ This app will allow customers to browse a list of products (sneakers, in this
 case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
 
-> Answer here
-```js
 
+```js
+var products {
+  brand;
+  color;
+  model;
+  size;
+  price;
+}
+
+var cart {
+  itemsInCart: [],
+  taxes; function();
+  total;
+  date;
+}
 ```
 
 ## Representing Abstractions in Code
@@ -160,7 +195,7 @@ var exampleLine = {
 
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
-> Answer here
+> One advantage is that it would be easy return an array that gives a list of the stations. A disadvantage would be to tell what the next stop is.
 ```js
 
 ```
@@ -289,7 +324,37 @@ b.  How might those entities be represented in JavaScript code?
 
   > Answer here
   ```js
+  var player {
+    player1name: "John",
+    image: 'http://somedomain.com/john.png'
+  }
 
+  var game {
+    player1: {
+      name:'John',
+      image:'http://somedomain.com/john.png'
+      }
+    player2:{
+      name:'Jane',
+      image: 'http://somedomain.com/jane.png'
+    }
+    moves:{
+      position1: 'player1',
+      position2: '',
+      position3: '',
+      position4: '',
+      position5: 'player2',
+      position6: '',
+      position7: '',
+      position8: '',
+      position9: '',
+    }
+  }
+
+  var move {
+    player1: 'X',
+    position: 1,
+  }
   ```
 
 c.  Justify your choices in a) and b). Why these entities? Why these
