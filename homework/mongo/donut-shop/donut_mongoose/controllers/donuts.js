@@ -108,7 +108,30 @@ router.get('/:id/edit', (request, response) => {
 //======================
 // Create a PUT update route "/:id" that updates the donut and
 // redirects back to the SHOW PAGE (not index)
-
+router.put('/:id', (request, response) => {
+    
+        const donutIdToUpdate = request.params.id;
+        const updatedDonutInfo = request.body;
+    
+        Donut.findByIdAndUpdate(
+            donutIdToUpdate,
+            updatedDonutInfo,
+            { new: true } // <-- DON'T FORGET THIS!!!
+        )
+            .then((donut) => {
+                console.log(`Donut with ID of ${donut._id} updated!`);
+    
+                response.render(
+                    'donut/show',
+                    { donut }
+                )
+            })
+            .catch((error) => {
+                console.log(`Donut with ID of ${donut._id} failed to update!`)
+                console.log(error);
+            })
+    
+    });
 
 
 //======================
