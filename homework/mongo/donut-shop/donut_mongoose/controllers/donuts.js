@@ -62,7 +62,22 @@ router.get('/:id', (request, response) => {
 //======================
 // Create a POST index route "/" that creates a new donut
 // and upon success redirects back to the index page "/"
-
+router.post('/', (request, response) => {
+    
+        const newDonutInfoFromForm = request.body;
+    
+    
+        Donut.create(newDonutInfoFromForm)
+            .then((donut) => {
+                response.render(
+                    'donuts/show',
+                    { donut }
+                )
+            })
+            .catch((error) => {
+                console.log('Error saving new donut to database!');
+                console.log(error);
+            });
 
 
 //======================
