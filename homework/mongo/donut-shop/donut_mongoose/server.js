@@ -41,6 +41,12 @@ var donutsController = require('./controllers/donuts.js');
 //======================
 //CONNECT MONGOOSE TO "donut_store"
 mongoose.connect('mongodb://localhost/donut_mongoose');
+var db = mongoose.connection;
+
+// error log for db connection error
+db.on('error', function(err){
+  console.log(err);
+})
 
 //CREATE THE MONGOOSE CONNECTION and SET APP TO LISTEN to 3000
 app.listen(4000, function(){
